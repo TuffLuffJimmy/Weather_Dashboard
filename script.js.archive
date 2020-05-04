@@ -1,0 +1,96 @@
+
+
+window.addEventListener('load', () => {
+  let long
+  let lat
+  const key = '92f6421bdd73bd3186d373e83e500ce4'
+  const currentCall = `api.openweathermap.org/data/2.5/weather?q=`
+
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      long = position.coords.longitude
+      lat = position.coords.latitude
+      console.log(position)
+    })
+  } else {
+    console.log('error getting location data')
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=${key}`)
+//   .then(r => r.json())
+//   .then(weather => {
+//     const wElem = document.getElementById('container').appendChild('div');
+//     wElem.className = 'mdc-card my-card'
+//     wElem.style = 'width: 18rem;'
+//     wElem.innerHTML = `
+//       <h1>${weather.name}</h1>
+//     `
+//   })
+//   .catch(r => console.log(r))
+
+// const Weather = {
+//   city: 'location',
+//   country: 'place',
+//   situation: 'hot',
+//   temp: {
+//     value: 85,
+//     unit: 'F'
+//   }
+// }
+
+// function Weather () {
+//   this.
+// }
+
+// function initWeather() {
+//   this.city = ''
+//   this.country = ''
+//   this.situation = ''
+//   this.temp.value = 0
+//   this.temp.unit = ''
+// }
+
+// function testWeather(input) {
+//   input.city = 'Huntington Beach'
+//   input.country = 'USA'
+//   input.situation = 'Partly Cloudy'
+//   input.temp.value = 13
+//   input.temp.unit = 'C'
+// }
+
+// const displayWeatherCard = (instance) => {
+//   const city = instance.city
+//   const country = instance.country
+//   const situation = instance.situation
+//   const temp = instance.temp.value
+//   const unit = instance.temp.unit
+
+//   document.getElementById('container').innerHTML = `
+//     <div class="mdc-card my-card">
+//       <h1>${city}, ${country}</h1>
+//       <h3>temp: ${temp}º${unit}</h3>
+//       <p>Current: ${situation}</p>
+//     </div>
+//   `
+// }
+
+// const huntington = new Weather()
+// console.log(huntington)
+// huntington.initWeather()
+// console.log(huntington)
+// testWeather(huntington)
+// console.log(huntington)
+// displayWeatherCard(huntington)

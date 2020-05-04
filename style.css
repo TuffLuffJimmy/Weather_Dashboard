@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(243, 245, 253);
+}
+
+nav {}
+
+.container {
+  padding: 5px;
+}
+
+.jumbotron {
+  margin: 5px;
+  padding: 5px;
+  display: block;
+}
+
+.search-side {
+  background-color: rgb(233, 236, 239);
+  padding-bottom: 100%;
+}
+
+#uv {
+  color: white;
+  background-color: black;
+}
+
+.myCards {
+  display: inline-flex;
+}
